@@ -1,0 +1,31 @@
+package ExerciseProblems;
+
+public class MathOperations {
+
+	public static void main(String[] args) {
+/*Write a Java program to print the result of the following operations. 
+Test Data:
+a. -5 + 8 * 6
+b. (55+9) % 9 
+c. 20 + -3*5 / 8 
+d. 5 + 15 / 3 * 2 - 8 % 3 
+Expected Output :
+43 
+1 
+19 
+13	
+ */
+
+	int a = -5;
+	int b = 8;
+	int c = 6;
+			
+    int result = a+b*c;
+    
+    System.out.println("The result is: " +result);
+    System.out.println("The result is: " +((55+9)%9));
+    System.out.println("The result is: " +(20 + -3*5 / 8));
+    System.out.println("The result is: " +(5 + 15 / 3 * 2 - 8 % 3));
+	}
+
+}
