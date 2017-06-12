@@ -1,0 +1,17 @@
+package Maps;
+
+public class Student {
+// instance variables. you have to make it public if the class is not in the same package
+	String id;
+	String name;
+	
+	public String toString(){
+		return "Student with id: " +id + " , name:" +name;
+		
+	}
+	
+	
+	
+	
+	 
+}

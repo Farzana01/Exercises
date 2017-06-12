@@ -1,0 +1,132 @@
+
+public class VirtualPet {
+
+	String name;
+	String description;
+	int hunger;
+	int thirst;
+	int boredom;
+	boolean clean;
+	
+	
+	
+	// creating constructor overload here so if two parameters are passed, it will execute this constructor
+		public VirtualPet(String nameC, String descriptionC) {
+			    this.name = nameC ;
+				this.description=descriptionC;		
+				this.hunger = 31;
+				this.thirst = 29;
+				this.boredom = 46;
+				this.clean = true;
+								
+			}
+			
+// creating a constructor that is accepting default values for hunger, thirst and boredom
+// 	this constructor will execute all parameters
+	public VirtualPet(String nameC, String descriptionC, int hungerC, int thirstC, int boredomC) {
+	    this.name = nameC ;
+		this.description=descriptionC;		
+		this.hunger = hungerC; // The default values will be set from the VirtualPetShelterApp with public static void main(String[] args)
+		this.thirst = thirstC; // The default values will be set from the VirtualPetShelterApp with public static void main(String[] args)
+		this.boredom = boredomC; // The default values will be set from the VirtualPetShelterApp with public static void main(String[] args)
+				
+	}
+	
+	public String toString() {
+        return description.toString() + " " + name;
+    }
+	
+	public int giveFood() {
+    this.hunger = hunger + 4;
+        if (this.hunger >= 10){
+        	this.hunger = 10;
+        	
+        } 
+        this.thirst = thirst - 1;   
+        return hunger;
+    }
+   
+    public int giveWater() {
+        this.thirst = thirst + 2;
+        if (this.thirst >= 10){
+       	  	this.thirst = 10;
+       	  	
+        }
+        
+        return thirst;
+    }
+    public void water() {};
+    public void play(){};
+	
+	public void feed() {};
+	
+	public String getName() {
+		   return name;
+
+		}
+    public int reduceBore() {
+    	this.boredom = boredom - 3;  
+    	
+    	if (this.boredom <= 0){
+    		this.boredom = 0;
+       	 
+     }
+    	return this.boredom;
+     }
+    
+     void tick() {
+    	
+    	this.hunger = hunger + 5;
+    	this.thirst = thirst - 2;
+    
+    	return;
+    }
+
+// stating the emotional state of the pet     
+    String petState(){
+    	if ((this.hunger == 10 || this.thirst == 10 && this.boredom ==10)){
+        	this.description = "Angry";
+    	}
+    	
+    	else if (this.hunger <= 5 || this.thirst <= 5 && this.boredom >= 5){
+        	this.description = "Angry";
+        }
+    	
+        else if (this.hunger <= 5 && this.thirst <= 5 && this.boredom >= 5){
+        	this.description = "Angry";
+        	
+        }
+    
+        else if (this.hunger >= 5 && this.thirst >= 5 && this.boredom >= 5){
+        	this.description = "Sleepy";
+        	
+	    }
+    	
+        else if (this.hunger >= 5 && this.thirst >= 5 && this.boredom <= 5){
+            this.description = "Party";
+        
+        }
+        
+        else if (this.hunger <= 5 && this.thirst <= 5 && this.boredom >= 5){
+        	this.description = "Hungry";
+        	
+	    }
+        
+        else {
+        
+        	this.description = "Happy";
+        	
+        }
+    	return this.description;
+    }
+    
+}
+
+       	
+	
+	
+	
+
+	 
+	
+

@@ -1,0 +1,74 @@
+package VehiclesWithInterface;
+
+public abstract class Vehicle {
+
+	protected int rateOfTravelPerHour; //mph
+	
+	//fuel
+	private int milesPerGallon;
+	private int maxTankCapacity;
+//	private int tankCapacity;
+	private int currentFuelLevel; // current
+	private double refuelingTimeInHours; 
+	
+	// that means that vehicles must implement this method
+	public abstract String getVehicleType();
+	
+	
+	//methods for 
+    public Vehicle(int rate, int fuel, int mpg, double refuelingTimeInHours){
+    	rateOfTravelPerHour = rate;
+    	currentFuelLevel = fuel;
+    	milesPerGallon = mpg;
+    	refuelingTimeInHours = refuelingTimeInHours;
+    }
+	/**
+	 * 
+	 * Travels for <code>hours</code, then return the distanceTravelled
+	 * 
+	 */
+	  
+	public double distanceTravelledIn(double hours){
+		return hours * rateOfTravelPerHour;
+		
+	}
+	
+	public double travelTimeBeforeRefueling() {
+	// (double) value causes the value to be treated like a double	
+		return (double) currentRange() / rateOfTravelPerHour;
+	}
+	
+	public double travelFor(double hours) {
+		if( hours >= travelTimeBeforeRefueling()) {
+			return (hours - refuelingTimeInHours) * rateOfTravelPerHour;
+					}
+	        return hours  * rateOfTravelPerHour;
+	}
+	
+	public boolean willNeedToBeRefueledWithin(double) {
+		if )
+		
+	}
+	
+	public int currentRange() {
+	 return currentFuelLevel * milesPerGallon;
+	
+	}
+  
+    public double getRefuelingTimeInHours() {
+    	return refuelingTimeInHours;
+    	
+    }
+    public double currentTravelTime() {
+    	return currentRange() / rateOfTravelPerHour ;
+    			
+    }
+    
+    @Override
+    public double travelTimeRemaining() {
+    	//(double) value causes the value to be treated like a double 
+    // 	return 1.0 * currentRange () / rateOfTravelPerHour; // multiply by 1.0 to get the fractional numbers
+        return (double) currentRange()/ rateOfTravelPerHour;
+    }
+} 
+    			

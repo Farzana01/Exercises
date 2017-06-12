@@ -1,0 +1,25 @@
+package Maps;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class StateNames {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map<String, String> states = new HashMap<String, String>();
+		 states.put("ca", "California");
+		 states.put("az", "Arizona");
+		 states.put("mn", "Minnesota");
+		 states.put("nj", "New Jersey");
+
+		 System.out.println(states.get("ca")); // California
+		 System.out.println(states.get("zz")); // null (no entry for key "zz")
+		 states.put("ca", "The Golden State"); 
+		
+		
+
+	}
+
+}

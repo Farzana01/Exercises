@@ -1,0 +1,20 @@
+package ArrayLists;
+
+import java.util.ArrayList;
+
+public class FiveAnimals {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<String> fiveAnimals = new ArrayList<String>();
+		fiveAnimals.add("cat");
+		fiveAnimals.add("dog");
+		fiveAnimals.add("panda");
+		fiveAnimals.add("bear");
+		fiveAnimals.add("koala");
+		System.out.println(fiveAnimals);
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package Employees;
+
+public class Janitor extends Employee {
+	public Janitor () {
+		super(111,"Hourly", "Patty", 15.25, "PartTime"); // int Id, String type, String name, double rate, String mentType
+	}
+	public String getEmployeeType() {
+		return ("I am a Janitor.");
+}

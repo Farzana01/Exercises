@@ -1,0 +1,15 @@
+package FizzBuzz;
+import org.junit.Test;
+
+public class FizzBuzzTest {
+	
+	@Test
+	public void shouldReturnOne() {
+		//arrange
+		FizzBuzz underTest= new Fizzbuzz();
+		//act
+		String response - underTest.say();
+		//assert
+	}
+
+}

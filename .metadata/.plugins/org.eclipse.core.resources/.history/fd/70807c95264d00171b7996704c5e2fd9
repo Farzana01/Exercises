@@ -1,0 +1,7 @@
+package virtualpetsamok;
+
+public class VirtualPetShelterAmokApp {
+
+ArrayList<> animals = new LinkedList<Animal>();
+
+}

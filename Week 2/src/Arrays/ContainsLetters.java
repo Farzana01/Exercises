@@ -1,0 +1,44 @@
+package Arrays;
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class ContainsLetters {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner input = new Scanner (System.in);
+	
+		System.out.println("Enter a word");
+		String word = input.nextLine();
+		word = word.toLowerCase();
+		
+			
+		System.out.println("Enter a letter");
+		String letterInput = input.nextLine();
+	    letterInput = letterInput.toLowerCase();
+		
+		// do it chars
+		char[] letterInputAsChars = letterInput.toCharArray();
+		char letter = letterInputAsChars[0];
+		
+		
+		if (word.contains(letterInputAsChars)) {
+			System.out.println("The word contains the letter " +letter);
+			
+		} else {
+			System.out.println("The word does not contain the letter " +letter);
+		}
+		
+				
+		input.close();
+	
+if(word.indexOf(letter) >=0) {
+	System.out.println("The word contains the letter.");
+} else { //index is -1
+	System.out.println("The word does not contain the letter.");
+}
+}
+
+
+}

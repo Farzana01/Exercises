@@ -1,0 +1,21 @@
+package virtualpetamok;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PlayTest {
+
+	@Test
+	public void test() {
+		RoboticPet dick = new RoboDog("RoboDick", "A robotic dog");
+		int output = dick.getOilLevel();
+		dick.oilPet();
+		
+		output = output + 20;
+		
+		assertEquals(70,output);
+	}
+
+}
+

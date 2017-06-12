@@ -1,0 +1,32 @@
+package OOPVIRTUALPET;
+
+public class VirtualPet {
+
+	String name;
+	String food;
+	String giveFood;
+	int water;
+	int happiness;
+	int boredom;
+	boolean clean;
+	
+	String petName(){
+		return name;
+	}
+	
+    String reNamePet(String pName){
+		name = pName;
+		return name;
+	}
+	
+    String giveFood(String fFood) {
+		food = fFood;
+       	return food;
+	}
+	
+	}
+	
+
+	 
+	
+}

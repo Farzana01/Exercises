@@ -1,0 +1,14 @@
+package Maps;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentRecords {
+
+	public static void main(String[] args) {
+ // same as ArrayList<Student>();
+		List<Student> students = new ArrayList<>();
+
+	}
+
+}

@@ -1,0 +1,154 @@
+package OOPVIRTUALPET;
+
+import java.util.Scanner;
+
+public class VirtualPetApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	
+        String pet;
+        VirtualPet vPet = new VirtualPet();
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to Farzana's Virtual Pet");
+		System.out.println("Please name your Pet");
+		System.out.println("Type Quit to exit.");
+		vPet.name = input.next();
+		checkForQuit(vPet.name);
+		
+	//	VirtualPet.name = vPetName;
+		
+		//System.out.println("\n");
+		System.out.println("You are the proud owner of " + vPet.name + " and it is a koala.");
+		System.out.println("");
+		System.out.println("Pick a number from 1 to 5 from the options below to play with " +vPet.name+ " now.");
+		System.out.println("");
+	
+		boolean play = true;
+	    
+		while (play == true) {
+			
+			showMenu();
+			System.out.println("");
+			//Scanner option = new Scanner(System.in);
+	    	//int vOption = option.nextInt();
+			String vOption = input.next();
+			//processMenu(vOption);
+			
+			checkForQuit(vOption);
+			int iOption = Integer.parseInt(vOption);
+	    
+	        
+	    switch(iOption) {    	
+	    	case 1:{
+	     	 	
+	           int food = 0;     
+	   	       System.out.println(food+ "I love Bamboo");
+	    	   break; 
+	    	}
+	    	case 4:{	    		
+	    		System.out.println("Great! You can rename your pet from " + vPet.name + " to any new name." );
+	    		String rName  = input.next();
+	    		checkForQuit(rName);
+	    		vPet.reNamePet(rName);
+	    		System.out.println("Now your pet's name is " + vPet.name + ".");
+	    		System.out.println("   *   ");
+	    		System.out.println("  / " + "\\");
+	    		System.out.println("   _  ");
+	    		System.out.println("{~._.~}");
+	    		System.out.println(" ( Y )");
+	    		System.out.println("()~*~()");
+	    		System.out.println("(_)-(_)");
+	    		break; 
+	    	}
+	    	
+	    	case 6:{	    		
+	    		System.out.println(vPet.name + " is sleepy. Let it sleep and it will play with you again later." );
+	    		play = false;
+	    		//System.out.println("   *   ");
+	    		System.out.println("  ___  ");
+	    		System.out.println("{~___~}");
+	    		System.out.println(" ( Y )");
+	    		System.out.println("()~*~()");
+	    		System.out.println("(_)-(_)");
+	    		System.exit(0);
+	    		break; 
+	    	}
+	    	
+	    	default:{
+	    		showMenu();
+	    		break; 
+	    	}
+			
+		    
+			
+		}
+		
+		}
+		input.close();
+	}
+	
+	
+	
+	public static void checkForQuit(String userInput){
+		//Scanner input = new Scanner(System.in);
+		
+		userInput = userInput.toLowerCase();
+		
+		if (userInput.equals("quit")) {		
+		System.out.println("Nobody likes a quitter...");
+		//String vQuit  = input.next();
+		System.exit(0);
+		}
+	}
+	
+    public static void showMenu(){
+    	System.out.println("1. Give food");
+    	System.out.println("2. Give water");
+    	System.out.println("3. Cleanup");
+    	System.out.println("4. Rename your pet");
+    	System.out.println("5. Dance with your pet");
+    	System.out.println("6. Let your pet sleep and end playing");
+    	
+      
+     }
+	
+    /*
+	public static void processMenu(String userOption) {
+    
+		checkForQuit(userOption);
+		int vOption = Integer.parseInt(userOption);
+    
+        
+    switch(vOption) {    	
+    	case 1:{
+     	 	
+           int food = 0;     
+   	       System.out.println(food+ "I love Bamboo");
+    	   break; 
+    	}
+    	case 4:{
+    		//Scanner input = new Scanner(System.in);
+    		System.out.println("Great! You can rename your pet to any new name." );
+    		//String rName  = input.next();
+    		
+    	}
+    	    	
+    	}
+          
+	}*/
+}
+    
+    	
+    	
+    	
+    	
+    	
+   
+    
+	
+
+	
+

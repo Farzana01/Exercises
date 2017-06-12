@@ -1,0 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class VirtualPetShelter {
+
+	Map<String, String> pets = new HashMap<String,String>();
+	   pets.put("mm" , "MickeyMouse");
+	   pets.put("dd","DonaldDuck");
+	   pets.put("cd", "Cinderella");
+	   pets.put("sw", "SnowWhite");
+	
+	   
+	
+	
+	
+	
+}

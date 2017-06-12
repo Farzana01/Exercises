@@ -1,0 +1,7 @@
+Virtual-Pet-Shelter README
+
+Goal: Get volunteers to play with the pet
+
+Setup: When the game is launched, the program generates random numbers for the hunger, thirst and boredom level. The user has to choose from options to keep it happy.
+
+How you play: The user input is essential to the healthy state of the pet. They get hungry and thirsty, enjoy playing with toys, crave attention, and love being spoiled by their owners.The volunteer can feed, water and play with the pets. Finally the volunteer can adopt up to 3 pets.

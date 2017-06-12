@@ -1,0 +1,8 @@
+package FizzBuzz;
+
+public class FizzBuzz {
+	public String say (){
+		return null;
+	}
+
+}

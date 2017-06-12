@@ -1,0 +1,25 @@
+package FizzBuzz;
+
+public class FizzBuzz {
+/*	public String say(){
+		return "1";
+	
+	*/
+	//say 2 times
+	int count = 0;
+    public String say() {
+	count++;
+	return "" + count;
+}
+    // say 3 times
+	public String say() {
+		count ++;
+		if (count == 3) {
+		return "Fizz" + count;
+	}
+		public String say(int times) {
+		String response = null;
+		 for (int count = 1; count <= times; count++) {
+			response = say();
+}
+ return response;

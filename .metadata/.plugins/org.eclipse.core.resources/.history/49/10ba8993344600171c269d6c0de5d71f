@@ -1,0 +1,18 @@
+package Constructors;
+
+public class ConstructorPet {
+ 
+	String name;
+	
+	public ConstructorPet(String newName) {
+	
+	     name = newName;
+}	
+ @Override	     
+
+	public String toString(){
+	 return "Pet named " +name;
+ }
+	
+	
+}

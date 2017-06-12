@@ -1,0 +1,71 @@
+package virtualpetamok;
+
+public class OrgCat extends Cat implements OrganicPet {
+
+	@Override
+	public void feed() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void water() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getHealth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getMood() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void play() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void tick() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int generateRandom() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getHunger() {
+		// TODO Auto-generated method stub
+		return getHunger();
+	}
+
+	@Override
+	public int getCageMessiness() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void cleanCage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

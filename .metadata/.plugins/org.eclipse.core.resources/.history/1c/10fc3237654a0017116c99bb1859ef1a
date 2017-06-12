@@ -1,0 +1,236 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Set;
+
+public class VirtualPetShelterApp {
+	
+	
+	public static void main(String[] args) {
+		
+    Map<String,VirtualPet> mapPets  = new HashMap<String, VirtualPet>();     
+	VirtualPetShelter shelter = new VirtualPetShelter();
+	
+		
+        //String petState;
+        VirtualPet vPet = new VirtualPet("Bob", "Nice big dog");
+        mapPets.put("Bob", vPet);
+        shelter.intake(vPet); 
+        VirtualPet vPet1 = new VirtualPet("Johnny", "Little mean dog");
+        mapPets.put("Johnny", vPet1);
+        shelter.intake(vPet1);
+        VirtualPet vPet2 = new VirtualPet("Lenny", "Snorty dog");
+        mapPets.put("Lenny", vPet2);
+        shelter.intake(vPet2);
+        VirtualPet vPet3 = new VirtualPet("Chatty", "Chatty kathy dog");
+        mapPets.put("Chatty", vPet3);
+        shelter.intake(vPet3);
+        VirtualPet vPet4 = new VirtualPet("Lily", "Funky dog", 18, 81, 63);
+        mapPets.put("Lily", vPet4);
+        shelter.intake(vPet4);
+       
+       System.out.println("Name" + "\t |Hunger " + "|Thirst " + "|Boredom");
+       System.out.println("---------" + "|-------" + "|-------" + "|-------");
+        
+        for(Map.Entry<String, VirtualPet> entry: mapPets.entrySet()){
+        	//String key = entry.getKey();
+        	VirtualPet v = entry.getValue();
+        	
+        	System.out.println(v.name + "\t |" + v.hunger + "\t |" + v.thirst + " " + v.boredom);
+        }
+        
+        /*
+        Set set = mapPets.entrySet();
+        Iterator itr = set.iterator();
+        
+        while(itr.hasNext()){
+        	Map.Entry entry = (Map.Entry)itr.next();
+        	System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+        */
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to Farzana's Virtual Pet World.");
+		System.out.println("Please name your Pet.");
+		System.out.println("Type Quit to exit.");
+	/*
+		for(VirtualPet pet: petsByName.values()) { // remember, pets() returns petsByName.values
+    		pet.feed();
+    	}
+		
+	*/	
+		
+		
+		vPet.name = input.next();
+		checkForQuit(vPet.name);
+	 
+		System.out.println("Thank you for volunteering at Farzana's Virtual Pet Shelter and Delicatessen!");
+		
+	//	petEmotions(vPet.petState());
+		
+		System.out.println("");
+		System.out.println(".");
+		System.out.println("");
+	
+		boolean play = true;
+	    
+		while (play == true) {
+			
+			showMenu();
+			System.out.println("");
+// Putting user input into vOption		
+			String vOption = input.next();
+			
+// method to check if the user wants to quit			
+			checkForQuit(vOption);
+			int iOption = Integer.parseInt(vOption);
+	    
+// options the user chose  	        
+	    switch(iOption) {    	
+	    	case 1:{	     	               
+	   	       System.out.println("Yayyy, I love food.");
+	   	       System.out.println("Food level: " + vPet.hunger);
+	   	       vPet.giveFood();
+	  // 	   	   petEmotions(vPet.petState());
+	   	       System.out.println("");
+	   	       //System.out.println("Level after giving hunger " + vPet.hunger + " and emotional state is " + vPet.state);
+	   	       System.out.println("Water level " + vPet.thirst);
+	   	       System.out.println("Boredom level " + vPet.boredom);
+	   	       System.out.println("Are you clean? " + vPet.clean);
+	   	       System.out.println("");
+	   	       break; 
+	    	}   
+	    	   
+	    	case 2:{ 
+	    	   System.out.println("I need water.");
+	    	   System.out.println("");
+	    	   System.out.println("Water level: " + vPet.thirst);
+	   	       vPet.giveWater();
+	  // 	       petEmotions(vPet.petState());
+	   	       //System.out.println("After giving thirst: " + vPet.thirst + " and emotional state is " + vPet.state);
+	   	       System.out.println("Food level " + vPet.hunger);
+	   	       System.out.println("Boredom level " + vPet.boredom);
+	   	       System.out.println("Are you clean? " + vPet.clean);
+	   	       System.out.println("");
+	   	       break; 
+	    	}   
+	    	
+	    	case 3:{
+	    		System.out.println("Pause Play and cleanup yourself.");
+		    	System.out.println("");
+		    	System.out.println("" + vPet.clean);
+		   	    //vPet.getClean();
+		  // 	    petEmotions(vPet.petState());
+		   	    System.out.println("Food level " + vPet.hunger);
+		   	    System.out.println("Water level " + vPet.thirst);
+		   	    System.out.println("Boredom level " + vPet.boredom);
+		   	    System.out.println("Are you clean? " + vPet.clean);
+		   	    System.out.println("");
+		   	    break; 	
+	    		
+	    	}
+	    	
+	    	case 4:{	    		
+	    		System.out.println("Don't like your pet's name? You can change " + vPet.name + " to any new name." );
+	    		String rName  = input.next();
+	    		checkForQuit(rName);
+	    		//vPet.reNamePet(rName);
+	    		System.out.println("Now your pet's name is " + vPet.name + ".");
+	    		System.out.println("Water level " + vPet.thirst);
+	    		System.out.println("Food level " + vPet.hunger);
+		   	    System.out.println("Boredom level " + vPet.boredom);
+		   	    System.out.println("Are you clean? " + vPet.clean);
+		   	    System.out.println("");
+		   	    break; 
+	    	}
+	    	
+	    	case 5:{	    		
+	    		System.out.println("Dance with your pet. ");
+	    		System.out.println("Before dance boredom level is: " + vPet.boredom);
+		   	    vPet.reduceBore();
+		 //  	    petEmotions(vPet.petState());
+		   	    //System.out.println("After dance boredom level is: " + vPet.boredom + " and emotional state is " + vPet.state);
+		   	    System.out.println("Water level " + vPet.thirst);
+	    		System.out.println("Food level " + vPet.hunger);
+		   	    System.out.println("Is it clean " + vPet.clean);
+		   	    System.out.println("");
+		   	    break; 
+	    	}
+	    	
+	    	case 6:{	    		
+	    		System.out.println("You asked " + vPet.name + " to fall asleep. Start your game again to play with your pet again later." );
+	    		play = false;
+	    		//vPet.state = "Sleepy";
+	    		System.out.println("Water level " + vPet.thirst);
+	    		System.out.println("Food level " + vPet.hunger);
+		   	    System.out.println("Boredom level " + vPet.boredom);
+		   	    System.out.println("Are you clean " + vPet.clean);
+	    		//petEmotions(vPet.state);
+	    		System.out.println("");
+	    		System.exit(0);
+	    		break; 
+	    	}
+	    	
+	    	default:{
+	    		vPet.tick();
+	    		showMenu();
+	    		break; 
+	    	}
+			
+	       }
+		
+		}
+		input.close();
+   }
+	
+	
+// method to quit the program	
+	public static void checkForQuit(String userInput){
+		
+		userInput = userInput.toLowerCase();
+		
+		if (userInput.equals("quit")) {		
+		System.out.println("Nobody likes a quitter...");
+		System.exit(0);
+		}
+	}
+	
+	public static int randInt(int min, int max) {
+
+	    // Usually this can be a field rather than a method variable
+	    Random rand = new Random();
+
+	    // nextInt is normally exclusive of the top value,
+	    // so add 1 to make it inclusive
+	    int randomNum = rand.nextInt((max - min) + 1) + min;
+
+	    return randomNum;
+	}
+	
+// show menu for available options	
+    public static void showMenu(){
+    	System.out.println("1. Give hunger");
+    	System.out.println("2. Give thirst");
+    	System.out.println("3. Cleanup");
+    	System.out.println("4. Rename your pet");
+    	System.out.println("5. Dance with your pet");
+    	System.out.println("6. Let your pet sleep and end playing");
+    	
+   }
+   
+ 
+    
+	
+}
+    	
+    	
+    	
+   
+    
+	
+
+	
+

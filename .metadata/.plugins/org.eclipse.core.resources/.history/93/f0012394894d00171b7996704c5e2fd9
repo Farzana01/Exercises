@@ -1,0 +1,77 @@
+package virtualpetsamok;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class VirtualPetShelter {
+	
+	public int litterBox;
+	 
+	public Map<String, VirtualPet> shelterPets = new HashMap<String, VirtualPet>(); 
+	public Map<String, OrganicPet> organicPets = new HashMap<String, OrganicPet>(); 
+	public Map<String, RoboticPet> roboticPets = new HashMap<String, RoboticPet>();
+	public Map<String, Dog> dogs = new HashMap<String, Dog>();
+	public Map<String, Cat> cats = new HashMap<String, Cat>();
+
+public void cleanLitterBox() {
+	litterBox = 0;
+}
+
+public void cleanDogCages() {
+	
+}
+
+public void walkDogs() {
+	
+}
+public void intake(VirtualPet pet) {
+	shelterPets.put(pet.getName(), pet);
+}
+//overloading 
+public void intake(VirtualPet pet, String organicDogs){ // organic dogs
+	shelterPets.put(pet.getName(), (Virtual pet),pet);
+	organicPets.put(pet.getName(), pet);
+	dogs.put(pet.getName(), pet);
+	
+}
+
+public void intake(VirtualPet pet, int roboticDogs){ // robotic dogs
+	shelterPets.put(pet.getName(), pet);
+	roboticPets.put(pet.getName(), pet);
+	dogs.put(pet.getName(), pet);
+	
+}
+public void intake(VirtualPet pet, String organic, String cat){ // organic cats
+	shelterPets.put(pet.getName(), pet);
+	organicPets.put(pet.getName(), pet);
+	cats.put(pet.getName(), pet);
+}
+
+public void intake(VirtualPet pet, int robotic, String cat){ // robotic cats
+	shelterPets.put(pet.getName(), pet);
+	roboticPets.put(pet.getName(), pet);
+	cats.put(pet.getName(), pet);
+}
+
+public void feedAll() {
+	for(VirtualPet p : organicPets.values()) {
+		p.feed();
+		
+	}
+}
+
+void tickAllPets() {
+	for (VirtualPet p: shelterValues, values);
+	
+}
+
+
+
+
+
+
+
+
+
+
+}

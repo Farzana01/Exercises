@@ -1,0 +1,84 @@
+package OOPVIRTUALPET;
+
+public class VirtualPet {
+
+	String name;
+	String state;
+	int food;
+	int water;
+	//int happiness;
+	int boredom;
+	boolean clean;
+	
+	String petName(){
+		return name;
+	}
+	
+    String reNamePet(String pName) {
+		name = pName;
+		return name;
+	}
+	
+    int giveFood() {
+        this.food = food + 4;
+        if (this.food >= 10){
+        	this.food = 10;
+        	clean = false;
+        } 
+        this.water = water - 2;   
+        return food;
+    }
+   
+    int giveWater() {
+        this.water = water + 2;
+        if (this.water >= 10){
+       	  	this.water = 10;
+       	  	clean = false;
+        }
+        
+        
+        return water;
+    }
+    
+    
+    String petState(){
+    	if (this.food >= 5 && this.water >= 5 && this.boredom <= 5){
+            this.state = "Happy";                        
+        
+    	}
+        else if (this.food <= 5 && this.water >= 5 && this.boredom >= 5){
+        	this.state = "Angry";
+        	
+        }
+        else if (this.food >= 5 && this.water >= 5 && this.boredom >= 5){
+        	this.state = "Sleepy";
+        	
+	    }
+    	
+        else if (this.food == 10 || this.water == 10 && this.clean == false){
+        	this.state = "Angry";
+        }
+        else if (this.food <= 5 && this.water <= 5 && this.boredom >= 5){
+        	this.state = "Hungry";
+        	
+	    }
+        else {
+        	this.state = "Party";
+        	
+        }
+    	return this.state;
+    }
+    
+    
+    
+    
+}
+
+       	
+	
+	
+	
+
+	 
+	
+

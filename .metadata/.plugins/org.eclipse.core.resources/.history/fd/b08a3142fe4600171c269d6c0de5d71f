@@ -1,0 +1,18 @@
+package Maps;
+
+public class RestaurantItem {
+	String food;
+	String salad;
+	
+}
+ 
+RestaurantItem () {
+	food = "Spaghetti";
+	food = "Lasagna";
+	food = "Pizza";
+	salad = "Caesar Salad";
+	salad = "Kale Salad";
+}	
+
+   
+

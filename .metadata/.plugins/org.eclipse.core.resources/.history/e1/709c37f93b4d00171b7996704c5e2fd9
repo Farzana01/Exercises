@@ -1,0 +1,13 @@
+package virtualpetsamok;
+
+public class VirtualPetApp {
+
+public static void main(String[] args) {
+	
+ VirtualPet dog = new OrganicDog("Tommy", "poodle");
+ 
+ System.out.println("I am " +dog);
+ 
+}
+
+}

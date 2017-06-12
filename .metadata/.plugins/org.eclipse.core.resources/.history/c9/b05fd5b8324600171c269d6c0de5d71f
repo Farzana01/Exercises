@@ -1,0 +1,14 @@
+package Constructors;
+
+public class VirtualPetAppConstructor {
+
+	public static void main(String[] args) {
+		VirtualPetConstructor myPet = new VirtualPetConstructor();
+		myPet.name = "Hope";
+		
+		
+		System.out.println("My pet is " +myPet.name);
+
+	}
+
+}

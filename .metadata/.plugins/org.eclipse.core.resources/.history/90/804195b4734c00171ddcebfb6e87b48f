@@ -1,0 +1,15 @@
+package FizzBuzz;
+
+public class FizzBuzz {
+/*	public String say(){
+		return "1";
+	
+	*/
+	int count = 0;
+public String say() {
+	count++;
+	return "" + count;
+}
+	
+	
+}

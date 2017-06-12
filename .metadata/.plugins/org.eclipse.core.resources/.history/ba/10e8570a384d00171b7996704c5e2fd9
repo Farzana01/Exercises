@@ -1,0 +1,17 @@
+package virtualpetsamok;
+
+import java.util.ArrayList;
+
+public class VirtualPetShelterApp {
+
+ArrayList<VirtualPet> animals = new ArrayList<VirtualPet>();
+ 
+      animals.add(new Animal());
+      animals.add(new Cat());
+      animals.add(new Dog());
+     
+      animals.add(new OtherAnimal());
+ 
+
+
+}

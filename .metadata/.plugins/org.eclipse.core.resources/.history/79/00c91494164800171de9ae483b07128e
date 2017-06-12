@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class VirtualPetShelter {
+
+	  public String name ;
+	  public String breed;
+	  
+	  ArrayList <String> petName = new ArrayList <>();        
+	  System.out.print("Enter a name: ");        
+	  Scanner input = new Scanner(System.in);        
+	  petName.add(input.next());        
+	  for (String Ted : name) {
+	      System.out.println(Ted);
+	  }
+	
+
+
+
+}
+
+
+

@@ -1,0 +1,14 @@
+package virtualpetsamok;
+
+public class VirtualPetApp {
+
+	public static void main(String[] args) {
+
+		VirtualPet dog = new OrganicDog("Steve", "Shih-Tzu");
+        VirtualPetShelter shelter = new VirtualPetShelter();
+        shelter.intake(steve);		
+        		
+        		
+	}
+
+}

@@ -1,0 +1,42 @@
+package DeliveryVehicles;
+
+public class Bicycles extends Vehicle {
+
+  
+	public int getNumberOfSeats()
+	  {
+	    return 335;
+	  }
+	 
+	  public int getNumberOfWheels()
+	  {
+	    return 6;
+	  }
+	 
+	  
+	  public String getVehicleType()
+	  {
+	    return "Bicycles";
+	  }
+	 
+	  public Integer getNumberOfDoors()
+	  {
+	    return 6;
+	  }
+	  
+	  public int getDistTravelled(int speed, int time) {
+		   
+		  
+		   int distance =   speed * time;
+		   return distance;
+	   
+	  }
+	  
+	  public int getTimeTravelled(int speed, int distance)
+	  {
+	  
+		  int time = distance/speed;
+		    
+		  return time;
+	  }
+	}

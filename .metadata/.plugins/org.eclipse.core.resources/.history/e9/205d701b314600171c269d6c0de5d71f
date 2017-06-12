@@ -1,0 +1,56 @@
+package Maps;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentRecords {
+
+	public static void main(String[] args) {
+ // same as ArrayList<Student>();
+		List<Student> students = new ArrayList<>();
+ 
+        Student harvey = new Student();		
+		harvey.id = "23A52"; 
+	    harvey.name = "Harvey Dent";	
+	    students.add(harvey);
+	    
+	    Student jessica = new Student(); // replace new Student with createStudent("68Z29", "Jessica Jones"
+	    jessica.id = "68z29";
+	    jessica.name = "Jessica Jones";
+	    students.add(jessica);
+//first create the method below	** then use it here   
+	    Student jj = createStudent("57W85", "J Jonah Jameson");
+	    
+	    students.add(jj);
+	
+	    System.out.println(jj);
+	    
+//	    System.out.println(students);
+	    
+//	    System.out.println("Meet jj:" +jj);
+	
+//	    String lookingFor = "Harvey Dent";
+//	    for (Student current:students) {
+//	    	System.out.println("Current: " + current);
+	   // same as if(current.name.equalsIgnoreCase(lookingFor)) { 	
+//	    	if(lookingFor.equalsIgnoreCase(current.name)) {
+//	        System.out.println("Found my student. His id id "+ current.id); 		
+	   
+	    	}
+	    	
+	    
+	    
+	
+	
+// creating method - creating an instance or object of the student **
+  public static Student createStudent(String idParam, String nameParam) {
+	Student s = new Student(); // default constructor
+	s.id = idParam;
+    s.name = nameParam;
+    return s;
+
+ }
+	
+}
+
+

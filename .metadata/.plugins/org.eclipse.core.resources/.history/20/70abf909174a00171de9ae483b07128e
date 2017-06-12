@@ -1,0 +1,20 @@
+package fizzBuzz;
+
+public class FizzBuzzWithoutMain {
+
+	int countUpTo;
+	public static void FizzBuzz(int countUpTo) {
+		this.countUpTo = countUpTo;
+	}
+	public void count () {
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

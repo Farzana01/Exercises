@@ -1,0 +1,43 @@
+
+
+public class VirtualPetShelter {
+	  
+// additional attributes of pets who reside at the shelter
+	
+    public int adopt;
+    public int dropoff;
+    public int koalasLeft;
+    public int totalKoala;
+       
+ // constructor 
+    VirtualPetShelter(int adopt,int dropoff) {
+	        this.adopt = adopt;
+	        this.dropoff= dropoff;
+	              
+	    }
+//allow adoption of a homeless pet
+     public int adoptaKoala() {
+    	 koalasLeft = totalKoala - 1;
+    	 
+    	 return koalasLeft;
+    	 
+     } //closing for adoptaKoala
+ 
+// allow drop off of a homeless pet     
+     public int dropaKoala() {
+    	 
+    	 koalasLeft = totalKoala + 1 ;
+    	 return koalasLeft;
+    	 
+     }//closing dropaKoala
+
+	}// closing for class VirtualPetShelter     
+
+
+
+
+
+
+
+
+	  

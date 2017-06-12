@@ -1,0 +1,14 @@
+package Vehicles;
+
+public class VehiclesApp {
+
+	public static void main(String[] args) {
+	//constructor
+		Vehicle v = new Vehicle(70, 10,23);
+		
+		System.out.println("My vehicle's current range is " + v.currentRange());
+		System.out.println("In 3 hours, I travel " + v.distanceTravelledIn(3));
+
+	}
+
+}

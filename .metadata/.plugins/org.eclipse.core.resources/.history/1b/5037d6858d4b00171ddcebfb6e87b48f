@@ -1,0 +1,35 @@
+package Vehicles;
+
+public class Vehicle {
+
+	private int rateOfTravelPerHour; //mph
+	
+	//fuel
+	private int milesPerGallon;
+	private int maxTankCapacity;
+	private int tankCapacity;
+	private int currentFuelLevel; // current
+	private double refuelingTimeInHours; 
+	
+	//methods for 
+    public Vehicle(int rate, int fuel, int mpg){
+    	rateOfTravelPerHour = rate;
+    	currentFuelLevel = fuel;
+    	milesPerGallon = mpg;
+    }
+	
+	public double distanceTravelledIn(double hours){
+		return hours * rateOfTravelPerHour;
+		
+	} 
+	public int currentRange() {
+	 return currentFuelLevel * milesPerGallon;
+	
+	}
+  
+    public double getRefuelingTimeInHours() {
+    	return refuelingTimeInHours;
+    	
+    }
+
+}

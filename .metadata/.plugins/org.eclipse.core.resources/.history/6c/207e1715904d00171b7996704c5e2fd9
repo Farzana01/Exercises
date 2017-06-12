@@ -1,0 +1,52 @@
+package virtualpetamok;
+
+public class RoboDog extends Dog implements RoboticPet{
+
+	public RoboDog(String newName, String newDescription) {
+		super(newName, newDescription);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void walk() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getHealth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getMood() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void play() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void tick() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int generateRandom() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,40 @@
+package Maps;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapsWithArrayList {
+
+	public static void main(String[] args) {
+
+		
+		
+	    ArrayList<String> pclothes = new ArrayList<String>();
+		pclothes.add("saree");
+		pclothes.add("kameez");
+		pclothes.add("tops");
+		System.out.println(pclothes);
+		
+		ArrayList<String> aclothes = new ArrayList<String>();
+		aclothes.add("shirt");
+		aclothes.add("pants");
+		aclothes.add("suits");
+		System.out.println(aclothes);	
+		
+		ArrayList<String> zclothes = new ArrayList<String>();
+		zclothes.add("socks");
+		zclothes.add("shoes");
+		zclothes.add("shorts");
+		System.out.println(zclothes);
+		
+		
+		
+	
+	// System.out.println("dogs", );
+		
+		
+		}
+
+}

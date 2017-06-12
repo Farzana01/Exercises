@@ -1,0 +1,38 @@
+package DeliveryVehicles;
+
+public class Planes implements Vehicle
+{
+ 
+  @Override
+  public int getNumberOfSeats()
+  {
+    return 335;
+  }
+ 
+  @Override
+  public int getNumberOfWheels()
+  {
+    return 6;
+  }
+ 
+  @Override
+  public String getVehicleType()
+  {
+    return "Airplane";
+  }
+ 
+  public Integer getNumberOfDoors()
+  {
+    return 6;
+  }
+  @Override
+  public int getDistTravelled()
+  {
+    return 1500;
+  }
+  @Override
+  public int getTimeTravelled()
+  {
+    return 16;
+  }
+}

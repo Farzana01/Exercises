@@ -1,0 +1,39 @@
+package DeliveryVehicles;
+
+      public class Vehicle {
+      
+	  public int numberOfWheels;
+	  public int numberOfPassengers;
+      public int distTravelled;	  
+      public int timeTravelled;	  
+      public String makeOfVehicle;
+	  public String modelOfVehicle;	  
+    	  
+      public int getNumberOfSeats();
+	  public int getNumberOfWheels();
+      public int getDistTravelled();
+      public int getTimeTravelled();
+      public int getSpeed();
+      public String getVehicleType();
+      
+      public static void main(String[] args) {   
+        Vehicle myBicycles = new Bicycles();
+        System.out.println("My " + myBicycles.getVehicleType() + " has " + myBicycles.getNumberOfSeats() + " seats.");
+        System.out.println("My " + myBicycles.getVehicleType() + " has " + myBicycles.getNumberOfWheels() + " wheels.");
+        System.out.println("My " + myBicycles.getVehicleType() + " can travel for " + myBicycles.getTimeTravelled() + " hours.");
+        System.out.println("My " + myBicycles.getVehicleType() + " can travel " + myBicycles.getDistTravelled() + " miles.");
+        
+        Vehicle myPlanes = new Planes();
+        System.out.println("My " + myPlanes.getVehicleType() + " has " + myPlanes.getNumberOfSeats() + " seats.");
+        System.out.println("My " + myPlanes.getVehicleType() + " has " + myPlanes.getNumberOfWheels() + " wheels.");
+        System.out.println("My " + myPlanes.getVehicleType() + " can travel for " + myPlanes.getTimeTravelled() + " hours.");
+        System.out.println("My " + myPlanes.getVehicleType() + " can travel " + myPlanes.getDistTravelled() + " miles.");
+        
+        Vehicle myVans = new Vans();
+        System.out.println("My " + myVans.getVehicleType() + " has " + myVans.getNumberOfSeats() + " seats.");
+        System.out.println("My " + myVans.getVehicleType() + " has " + myVans.getNumberOfWheels() + " wheels.");
+        System.out.println("My " + myVans.getVehicleType() + " can travel for " + myVans.getTimeTravelled() + " hours.");
+        System.out.println("My " + myVans.getVehicleType() + " can travel " + myVans.getDistTravelled() + " miles.");
+        
+      }
+}

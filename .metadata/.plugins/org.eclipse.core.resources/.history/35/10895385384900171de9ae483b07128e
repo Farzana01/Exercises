@@ -1,0 +1,28 @@
+package Maps;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapsWithArrayList {
+
+	public static void main(String[] args) {
+
+		ArrayList<String> shelter = new ArrayList<String>();
+		shelter.add("dogs");
+		shelter.add("cats");
+		shelter.add("volunteer");
+		System.out.println(shelter);
+		
+		
+//		Map<String, String> myPets = new HashMap<String, String>();
+//		myPets.put("dogs", "Brady");
+//		myPets.put("cats", "Kitty");
+//		myPets.put("volunteer", "Peony");
+	//	System.out.println("dogs", );
+		
+		
+		}
+
+}

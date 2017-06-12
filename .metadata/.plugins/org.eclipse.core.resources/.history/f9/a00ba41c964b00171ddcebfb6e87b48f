@@ -1,0 +1,47 @@
+package Vehicles;
+
+public class Vehicle {
+
+	private int rateOfTravelPerHour; //mph
+	
+	//fuel
+	private int milesPerGallon;
+	private int maxTankCapacity;
+	private int tankCapacity;
+	private int currentFuelLevel; // current
+	private double refuelingTimeInHours; 
+	
+	//methods for 
+    public Vehicle(int rate, int fuel, int mpg){
+    	rateOfTravelPerHour = rate;
+    	currentFuelLevel = fuel;
+    	milesPerGallon = mpg;
+    }
+	/**
+	 * 
+	 * Travels for <code>hours</code, then return the distanceTravelled
+	 * 
+	 */
+	  
+	public double distanceTravelledIn(double hours){
+		return hours * rateOfTravelPerHour;
+		
+	} 
+	public int currentRange() {
+	 return currentFuelLevel * milesPerGallon;
+	
+	}
+  
+    public double getRefuelingTimeInHours() {
+    	return refuelingTimeInHours;
+    	
+    }
+    public double currentTravelTime() {
+    	return currentRange() / rateOfTravelPerHour ;
+    			
+    }
+    public double travelTimeRemaining() {
+    	return 1.0 * currentRange () / rateOfTravelPerHour; // multiply by 1.0 to get the fractional numbers
+    }
+} 
+    			

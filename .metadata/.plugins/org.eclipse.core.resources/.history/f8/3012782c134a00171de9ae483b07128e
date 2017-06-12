@@ -1,0 +1,25 @@
+package fizzBuzz;
+
+public class FizzBuzz {
+
+	public static void main(String[] args) {
+		
+		int countUpTo = 20;
+		for (int count = 1; count <= countUpTo; count++) {
+		
+			String say = ""+ count; //default to count
+			if(count % 3 == 0) {
+			say("Fizz");//
+		}
+			
+			
+		//	System.out.println(count);
+			System.out.println(say);
+		}
+		
+	}
+	
+}
+	
+
+

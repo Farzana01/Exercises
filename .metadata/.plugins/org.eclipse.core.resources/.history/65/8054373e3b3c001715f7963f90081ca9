@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Riddle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	System.out.println(" What has four eyes but cannot see?");
+	Scanner input = new Scanner(System.in);
+	String k = input.nextLine();
+		
+	}
+
+}

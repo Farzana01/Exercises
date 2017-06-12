@@ -1,0 +1,19 @@
+package Vehicles;
+
+public class VehiclesApp {
+
+	public static void main(String[] args) {
+	//constructor
+		Vehicle v = new Vehicle(70, 10,23);
+		
+		System.out.println("My vehicle's current range is " + v.currentRange());
+		System.out.println("I have enough gas for " + v.travelTimeRemaining() + "hours");
+
+
+		System.out.println("In 3 hours, I travelled " + v.distanceTravelledIn(3));
+		System.out.println("In 6 hours, I travelled " + v.distanceTravelledIn(3));
+
+
+	}
+
+}

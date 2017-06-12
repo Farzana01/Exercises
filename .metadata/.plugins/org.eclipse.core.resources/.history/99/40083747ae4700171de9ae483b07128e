@@ -1,0 +1,114 @@
+public class VirtualPet {
+
+	String name;
+	String state;
+	int hunger;
+	int thirst;
+	int dance;
+	int boredom;
+	boolean clean;
+	
+	String petName(){
+		return name;
+	}
+	
+    String reNamePet(String pName) {
+		name = pName;
+		return name;
+	}
+	
+    int giveFood() {
+        this.hunger = hunger + 4;
+        if (this.hunger >= 10){
+        	this.hunger = 10;
+        	clean = false;
+        } 
+        this.thirst = thirst - 1;   
+        return hunger;
+    }
+   
+    int giveWater() {
+        this.thirst = thirst + 2;
+        if (this.thirst >= 10){
+       	  	this.thirst = 10;
+       	  	clean = false;
+        }
+        
+        return thirst;
+    }
+    
+    int reduceBore() {
+    	this.boredom = boredom - 3;  
+    	
+    	if (this.boredom <= 0){
+    		this.boredom = 0;
+       	 
+     }
+    	return this.boredom;
+     }
+    
+    boolean getClean() {
+     
+    	this.clean = true;
+    	this.hunger = hunger - 1;
+    	this.thirst = thirst - 1;
+           
+    	return clean;
+    }
+    
+    void tick() {
+    	
+    	this.hunger = hunger + 5;
+    	this.thirst = thirst - 2;
+    	this.clean = false;
+    
+    	return;
+    }
+        
+    String petState(){
+    	if ((this.hunger == 10 || this.thirst == 10) && this.clean == false){
+        	this.state = "Angry";
+    	}
+    	
+    	else if (this.hunger <= 5 || this.thirst <= 5 && this.boredom >= 5){
+        	this.state = "Angry";
+        }
+    	
+        else if (this.hunger <= 5 && this.thirst <= 5 && this.boredom >= 5){
+        	this.state = "Angry";
+        	
+        }
+    
+        else if (this.hunger >= 5 && this.thirst >= 5 && this.boredom >= 5){
+        	this.state = "Sleepy";
+        	
+	    }
+    	
+        else if (this.hunger >= 5 && this.thirst >= 5 && this.boredom <= 5){
+            this.state = "Party";
+        
+        }
+        
+        else if (this.hunger <= 5 && this.thirst <= 5 && this.boredom >= 5){
+        	this.state = "Hungry";
+        	
+	    }
+        
+        else {
+        
+        	this.state = "Happy";
+        	
+        }
+    	return this.state;
+    }
+    
+}
+
+       	
+	
+	
+	
+
+	 
+	
+

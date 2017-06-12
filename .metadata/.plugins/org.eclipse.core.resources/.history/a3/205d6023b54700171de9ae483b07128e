@@ -1,0 +1,122 @@
+public class VirtualPet {
+
+	String name;
+	String description;
+	int hunger;
+	int thirst;
+	int dance;
+	int boredom;
+		
+	public VirtualPet(String name, String state) {
+	    this.name = name;
+	    this.description = state;
+	    
+	}
+	    		
+	 public VirtualPet(String name, String state, int hunger,int thirst,int boredom) {
+		this.name = name;
+		this.description = description;
+		this.hunger = hunger;
+		this.boredom = boredom;
+	
+    
+    
+    
+    
+    
+    }
+	
+    int giveFood() {
+        this.hunger = hunger + 4;
+        if (this.hunger >= 10){
+        	this.hunger = 10;
+        	
+        } 
+        this.thirst = thirst - 1;   
+        return hunger;
+    }
+   
+    int giveWater() {
+        this.thirst = thirst + 2;
+        if (this.thirst >= 10){
+       	  	this.thirst = 10;
+       	  	
+        }
+        
+        return thirst;
+    }
+    
+    int reduceBore() {
+    	this.boredom = boredom - 3;  
+    	
+    	if (this.boredom <= 0){
+    		this.boredom = 0;
+       	 
+     }
+    	return this.boredom;
+     }
+    
+ //   boolean getClean() {
+     
+   // 	this.clean = true;
+    //	this.hunger = hunger - 1;
+   // 	this.thirst = thirst - 1;
+           
+   // 	return clean;
+   // }
+    
+    void tick() {
+    	
+    	this.hunger = hunger + 5;
+    	this.thirst = thirst - 2;
+    
+    	return;
+    }
+        
+    String petState(){
+    	if ((this.hunger == 10 || this.thirst == 10){
+        	this.description = "Angry";
+    	}
+    	
+    	else if (this.hunger <= 5 || this.thirst <= 5 && this.boredom >= 5){
+        	this.description = "Angry";
+        }
+    	
+        else if (this.hunger <= 5 && this.thirst <= 5 && this.boredom >= 5){
+        	this.description = "Angry";
+        	
+        }
+    
+        else if (this.hunger >= 5 && this.thirst >= 5 && this.boredom >= 5){
+        	this.description = "Sleepy";
+        	
+	    }
+    	
+        else if (this.hunger >= 5 && this.thirst >= 5 && this.boredom <= 5){
+            this.description = "Party";
+        
+        }
+        
+        else if (this.hunger <= 5 && this.thirst <= 5 && this.boredom >= 5){
+        	this.description = "Hungry";
+        	
+	    }
+        
+        else {
+        
+        	this.description = "Happy";
+        	
+        }
+    	return this.description;
+    }
+    
+}
+
+       	
+	
+	
+	
+
+	 
+	
+

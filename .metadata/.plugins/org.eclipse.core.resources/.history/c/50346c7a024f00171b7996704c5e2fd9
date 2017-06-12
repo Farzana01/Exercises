@@ -1,0 +1,21 @@
+package virtualpetamok;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class OrgDogFeedTest {
+
+	@Test
+	public void test() {
+		OrgDog benny = new OrgDog("Benny","Cutest dog in the world");
+		int output = benny.hunger;
+		
+		benny.feed();
+		output = output -20;
+		
+		assertEquals(40,output);
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+package ArrayLists;
+
+import java.util.ArrayList;
+
+public class BooleanLoop {
+
+	public static void main(String[] args) {
+		
+//Create a list that contains the following boolean values: true, false, false, true, false. Loop through your list. Based on the value of each element, print a message:
+  // true: “Better bring an umbrella”
+	//false: “No rain today, enjoy the sun!”		
+		
+		ArrayList<String> weatherList = new ArrayList<String>();
+		weatherList.add("true");
+		weatherList.add("false");
+		weatherList.add("false");
+		weatherList.add("true");
+		weatherList.add("false");
+		System.out.println(weatherList);
+		
+		
+	//	boolean weather = true;
+		
+		for (String weather : weatherList)  {
+			
+			
+			System.out.println(weather + "!");
+		}
+			System.out.println(weatherList);
+			
+		//	while ()
+	//		System.out.println(weather1 + "! ");
+		
+		}
+	
+	}	
+	
+
+

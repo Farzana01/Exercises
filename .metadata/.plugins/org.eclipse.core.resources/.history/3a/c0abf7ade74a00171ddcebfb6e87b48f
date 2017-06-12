@@ -1,0 +1,52 @@
+package DeliveryVehicles;
+
+public class Bicycles implements Vehicle
+{
+	
+	int time = 0;
+	int distance = 0;
+    int speed = 0;
+    
+	 @Override
+	  public int getSpeed()
+	  {
+	   int speed = int distance / int time; 
+		 
+		 return 2;
+	  }
+
+  {
+  }
+  @Override
+  public int getNumberOfSeats()
+  {
+    return 2;
+  }
+ 
+  @Override
+  public int getNumberOfWheels()
+  {
+    return 2;
+  }
+ 
+  @Override
+  public String getVehicleType()
+  {
+    return "Bicycle";
+  }
+ 
+  public Integer getNumberOfDoors()
+  {
+    return 0;
+  }
+  @Override
+  public int getDistTravelled()
+  {
+    return 60;
+  }
+  @Override
+  public int getTimeTravelled()
+  {
+    return 16;
+  }
+}

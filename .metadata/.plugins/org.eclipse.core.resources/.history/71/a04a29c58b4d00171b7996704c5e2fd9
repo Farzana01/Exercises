@@ -1,0 +1,21 @@
+package virtualpetamok;
+
+public class VirtualPetApp {
+
+	public static void main(String[] args) {
+		 
+		OrganicPet steve = new OrgDog("Steve", "Shih-Tzu");
+		VirtualPetShelter shelter = new VirtualPetShelter();
+		shelter.intake(steve, "organic Dog");
+		System.out.println("" + steve.getHunger());
+		shelter.feedAllOrganic();
+		System.out.println("" + steve.getHunger());
+		System.out.println("" + steve.getCageMessiness());
+
+		shelter.cleanDogCages();
+		System.out.println("" + steve.getCageMessiness());
+		
+
+	}
+
+}

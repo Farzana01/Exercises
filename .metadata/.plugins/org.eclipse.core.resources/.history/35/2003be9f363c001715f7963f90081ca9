@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class FirstNameLastName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner input = new Scanner(System.in);
+			System.out.println("Please type your First Name");
+			String first = input.next();
+			int firstlength = 0;
+			
+			System.out.println("Please type your Last Name");
+			String last = input.next();
+			int lastlength = 0;
+		   	input.close();			
+	}
+	
+
+
+	
+}

@@ -1,0 +1,8 @@
+package virtualpetamok;
+
+public class Cat extends VirtualPet {
+	
+	
+
+
+}

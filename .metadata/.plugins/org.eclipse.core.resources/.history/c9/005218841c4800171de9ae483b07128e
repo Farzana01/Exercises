@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+public class VirtualPetShelter {
+
+	  public String name ;
+	  public String breed;
+	  
+	   ArrayList <String> petName = new ArrayList<String>();
+		 petName.add("Polo");  
+		 petName.add("Milo");
+		 petName.add("Nolo");
+	     petName.add("Tolo");
+
+
+	  
+	//  for (String Ted : name) {
+	  //    System.out.println(Ted);
+	  
+	
+
+
+
+}
+
+
+

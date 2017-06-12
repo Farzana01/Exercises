@@ -1,0 +1,87 @@
+package virtualpetamok;
+
+import java.util.Random;
+
+public abstract class VirtualPet {
+
+	protected Random generator = new Random();
+	
+	//Instance variables
+	protected String name;
+	protected String description;
+
+	protected int health;
+	protected int mood;
+	
+	//Constructor that accepts VirtualPet and establishes default attributes for new pets
+	public VirtualPet(String newName, String newDescription) {
+		name = newName;
+		description = newDescription;
+		health = 50;
+		mood = 50;
+	}
+	
+	public abstract String getName();
+	
+	public abstract int getHealth();
+	
+	public abstract int getMood();
+	
+	public abstract void play();
+	
+	public abstract void tick();
+	
+	public abstract int generateRandom();
+	
+}
+//	//Constructor creates an object that allows to add pets and populate values initially in the map
+//	public VirtualPet(String newName, String newDescription, Integer newHunger, Integer newThirst, Integer newBoredom, Integer newCleanliness) {
+//		name = newName;
+//		description = newDescription;
+//		hunger = newHunger;
+//		thirst = newThirst;
+//		boredom = newBoredom;
+//		cleanliness = newCleanliness;
+//	
+//		int hunger;
+//	int thirst;
+//	int boredom;
+//	int cleanliness;
+//	
+//
+//	}
+//	}
+//
+//	// Tick method
+//
+//	void tick() {
+//		hunger = hunger + r.nextInt(20);
+//		thirst = thirst + r.nextInt(20);
+//		boredom = boredom + r.nextInt(20);
+//	}
+//
+//	// Hunger method
+//	void feedPet() {
+//		hunger = hunger - 25;
+//	}
+//
+//	// Thirst method
+//	void waterPet() {
+//		thirst = thirst - 20;
+//		hunger = hunger + 10;
+//	}
+//	
+//	// Cleanliness method
+//		void cleanPet() {
+//			cleanliness = cleanliness + 20;
+//		}
+//
+//	// Boredom method
+//	void playPet() {
+//		boredom = boredom - 20;
+//		thirst = thirst + 10;
+//		hunger = hunger + 10;
+//	}
+//	
+//	
+//}

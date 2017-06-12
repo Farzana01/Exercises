@@ -1,0 +1,8 @@
+package virtualpetsamok;
+
+public abstract class VirtualPetAmok {
+	public void feed() {
+		System.out.println("I will eat whatever you give");
+	}
+
+}

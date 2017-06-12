@@ -1,0 +1,40 @@
+package OOPVIRTUALPET;
+
+public class VirtualPet {
+
+	String name;
+	String state;
+	int food;
+	int water;
+	//int happiness;
+	int boredom;
+	boolean clean;
+	
+	String petName(){
+		return name;
+	}
+	
+    String reNamePet(String pName) {
+		name = pName;
+		return name;
+	}
+	
+    int giveFood() {
+        this.food = food + 4;
+        if (this.food >= 10)
+        	this.food = 10;
+    return food;
+    
+    }
+    
+    
+}
+
+       	
+	
+	
+	
+
+	 
+	
+

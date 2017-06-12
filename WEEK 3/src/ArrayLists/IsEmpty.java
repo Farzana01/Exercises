@@ -1,0 +1,23 @@
+package ArrayLists;
+
+import java.util.ArrayList;
+
+public class IsEmpty {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		ArrayList<Integer> answers = new ArrayList<Integer>();
+		System.out.println("Are you out of answers? " + answers.isEmpty());
+		//will output the same but will make the code look ugly
+		System.out.println("Are you out of answers? " + (answers.size() == 0));
+		
+		answers.add(42);
+		System.out.println("Are you out of answers? " + answers.isEmpty());
+		
+	}
+	
+	}
+
+

@@ -1,0 +1,28 @@
+package Constructors;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Cart {
+	
+	List<CartItem> items = new ArrayList<CartItem>();
+	
+	public void addItem(CartItem item) {
+           items.add(item);
+
+	}
+	
+	public String toString() {
+		
+		return "Cart with items: " + items;
+	}
+	
+	public double totalPrice() {
+		double cartPrice = 0;
+		for(CartItem currentItem: items) {
+		   cartPrice = cartPrice + currentItem.totalPrice();
+	}
+		return cartPrice;
+}
+	
+}	

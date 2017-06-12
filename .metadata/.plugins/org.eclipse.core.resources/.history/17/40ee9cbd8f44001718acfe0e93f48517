@@ -1,0 +1,237 @@
+package OOPVIRTUALPET;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class VirtualPetApp {
+	
+	public void tick(){
+		
+	}
+	
+	
+	public void run(){
+		long lastTime = System.nanoTime();
+		final double amountOfTicks = 60D;
+		double ns = 1000000000/amountOfTicks;
+		double delta = 0;
+		
+		//while(running){
+			long now = System.nanoTime();
+			delta += (now - lastTime)/ns;
+			lastTime = now;
+			
+			if(delta >= 1){
+				tick();
+				delta--;
+			//}
+			//render();
+		}
+		//stop();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	
+        String pet;
+        String petState;
+        VirtualPet vPet = new VirtualPet();
+        
+        //Initialize pet's attributes
+        vPet.food = randInt(1,10);
+        vPet.water = randInt(1,10);
+        //vPet.happiness = randInt(1,10);
+        vPet.boredom = randInt(1,10);
+        vPet.clean = true;
+        
+        if (vPet.food >= 5 && vPet.water >= 5 && vPet.boredom <= 5){
+            petState = "Happy";
+            System.out.println(petState);
+            showPic(petState);
+            
+        }
+        else if (vPet.food <= 5 && vPet.water <= 5 && vPet.boredom >= 5){
+        	petState = "Angry";
+        	System.out.println(petState);
+            showPic(petState);
+        }
+        else if (vPet.food >= 5 && vPet.water >= 5 && vPet.boredom >= 5){
+        	petState = "Sleepy";
+        	System.out.println(petState);
+            showPic(petState);
+	    }
+        else if (vPet.food <= 5 && vPet.water >= 5 && vPet.boredom >= 5){
+        	petState = "Hungry";
+        	System.out.println(petState);
+            showPic(petState);
+	    }
+        else {
+        	petState = "Party";
+        	System.out.println(petState);
+            showPic(petState);
+        }
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to Farzana's Virtual Pet");
+		System.out.println("Please name your Pet");
+		System.out.println("Type Quit to exit.");
+		vPet.name = input.next();
+		checkForQuit(vPet.name);
+		
+	//	VirtualPet.name = vPetName;
+		
+		//System.out.println("\n");
+		System.out.println("You are the proud owner of " + vPet.name + " and it is a koala.");
+		System.out.println("");
+		System.out.println("Pick a number from 1 to 5 from the options below to play with " +vPet.name+ " now.");
+		System.out.println("");
+	
+		boolean play = true;
+	    
+		while (play == true) {
+			
+			showMenu();
+			System.out.println("");
+			//Scanner option = new Scanner(System.in);
+	    	//int vOption = option.nextInt();
+			String vOption = input.next();
+			//processMenu(vOption);
+			
+			checkForQuit(vOption);
+			int iOption = Integer.parseInt(vOption);
+	    
+	        
+	    switch(iOption) {    	
+	    	case 1:{
+	     	 	
+	           int food = 0;     
+	   	       System.out.println("I love Eucalyptus");
+	    	   break; 
+	    	   
+	    	}
+	    	case 4:{	    		
+	    		System.out.println("Great! You can rename your pet from " + vPet.name + " to any new name." );
+	    		String rName  = input.next();
+	    		checkForQuit(rName);
+	    		vPet.reNamePet(rName);
+	    		System.out.println("Now your pet's name is " + vPet.name + ".");
+	    		/*System.out.println("   *   ");
+	    		System.out.println("  / " + "\\");
+	    		System.out.println("   _  ");
+	    		System.out.println("{~._.~}");
+	    		System.out.println(" ( Y )");
+	    		System.out.println("()~*~()");
+	    		System.out.println("(_)-(_)");*/
+	    		break; 
+	    	}
+	    	
+	    	case 6:{	    		
+	    		System.out.println(vPet.name + " is sleepy. Let it sleep and it will play with you again later." );
+	    		play = false;
+	    		//System.out.println("   *   ");
+	    		//petPic()
+	    		System.exit(0);
+	    		break; 
+	    	}
+	    	
+	    	default:{
+	    		showMenu();
+	    		break; 
+	    	}
+			
+		    
+			
+		}
+		
+		}
+		input.close();
+	}
+	
+	
+	
+	public static void checkForQuit(String userInput){
+		//Scanner input = new Scanner(System.in);
+		
+		userInput = userInput.toLowerCase();
+		
+		if (userInput.equals("quit")) {		
+		System.out.println("Nobody likes a quitter...");
+		//String vQuit  = input.next();
+		System.exit(0);
+		}
+	}
+	
+	public static int randInt(int min, int max) {
+
+	    // Usually this can be a field rather than a method variable
+	    Random rand = new Random();
+
+	    // nextInt is normally exclusive of the top value,
+	    // so add 1 to make it inclusive
+	    int randomNum = rand.nextInt((max - min) + 1) + min;
+
+	    return randomNum;
+	}
+	
+    public static void showMenu(){
+    	System.out.println("1. Give food");
+    	System.out.println("2. Give water");
+    	System.out.println("3. Cleanup");
+    	System.out.println("4. Rename your pet");
+    	System.out.println("5. Dance with your pet");
+    	System.out.println("6. Let your pet sleep and end playing");
+    	
+      
+     }
+    
+    public static void showPic(String state){
+    
+    switch (state){
+      case "Party":{
+    	System.out.println("   *   ");
+		System.out.println("  / " + "\\");
+		System.out.println("   _  ");
+		System.out.println("{~._.~}");
+		System.out.println(" ( Y )");
+		System.out.println("()~*~()");
+		System.out.println("(_)-(_)");
+		break;
+      }
+      case "Sleepy":{
+    	System.out.println("  ___  ");
+  		System.out.println("{~___~}");
+  		System.out.println(" ( Y )");
+  		System.out.println("()~*~()");
+  		System.out.println("(_)-(_)");
+  		break;
+        }
+      case "Angry":{
+      	System.out.println("  ___  ");
+    		System.out.println("{~x_x~}");
+    		System.out.println(" ( Y )");
+    		System.out.println("()~*~()");
+    		System.out.println("(_)-(_)");
+    		break;
+          }
+      case "Happy":{
+        	System.out.println("   _ _  ");
+      		System.out.println("{~._.~}");
+      		System.out.println("_( Y )_");
+      		System.out.println("(:_~*~_:)");
+      		System.out.println("(_)-(_)");
+      		break;
+            }
+    }
+    }
+	
+}
+    	
+    	
+    	
+   
+    
+	
+
+	
+

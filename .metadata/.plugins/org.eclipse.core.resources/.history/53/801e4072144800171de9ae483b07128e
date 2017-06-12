@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+//import java.util.HashMap;
+//import java.util.Map;
+
+public class VirtualPetShelter {
+
+	  public String name;
+	  public String breed;
+	  
+	
+	ArrayList<String> virtualPet = new ArrayList<String>();
+	  virtualPet.add("Vicky");
+	  virtualPet.add("Spot");
+	  virtualPet.add("Teddy")
+      virtualPet.add("Ticky");
+
+	for(int i =  1; i <=4;  i++)
+	{
+	     virtualPet.add(str+i)//something like this?
+
+
+
+
+}
+
+
+

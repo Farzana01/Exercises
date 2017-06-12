@@ -1,0 +1,9 @@
+public abstract class Dog extends VirtualPet{
+
+	public Dog(String newName, String newDescription) {
+		super(newName, newDescription);
+	}
+	
+	public abstract void walk();
+	
+}

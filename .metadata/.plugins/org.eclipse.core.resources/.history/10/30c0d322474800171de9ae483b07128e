@@ -1,0 +1,34 @@
+
+
+public class VirtualPetShelter {
+	  
+// pets who reside at the shelter
+	
+    public int name;
+    public VirtualPetShelter description;
+
+	  VirtualPetShelter(int id, VirtualPetShelter type, int name) {
+	        this.name = name;
+	        this.description = type;
+	    }
+
+	    public int getName() {
+	        return name;
+	    }
+
+	    public VirtualPetShelter getType() {
+	        return description;
+	    }
+
+	    public String toString() {
+	        return description.toString() + " " + name;
+	    }
+
+	}// closing for class VirtualPetShelter     
+
+
+
+
+
+
+	  

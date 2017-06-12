@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Riddle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	System.out.println("How many seconds are in one year?");
+		
+		Scanner input = new Scanner(System.in);
+			int	k = input.nextInt();
+	
+			if (k == 12)
+				System.out.println("Bingo!You Got It");
+			
+			else if (k == 31536000)
+				System.out.print("You maybe a math wiz...But that's not the"
+	                  +" answer. Try again!");
+	
+			else if (k > 12 && k < 31536000)
+				System.out.println("You are doing good. Keep tryin'.");
+			
+			else
+				System.out.println("You are way off!");	
+		input.close();	
+	}
+
+}

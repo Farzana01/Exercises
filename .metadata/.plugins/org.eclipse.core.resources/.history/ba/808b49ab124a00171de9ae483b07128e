@@ -1,0 +1,22 @@
+package fizzBuzz;
+
+public class FizzBuzz {
+
+	public static void main(String[] args) {
+		
+		int countUpTo = 20;
+		for (int count = 1; count <= countUpTo; count++) {
+		if(count % 3 == 0) {
+			System.out.println("Fizz");
+		}
+			
+			
+			System.out.println(count);
+		}
+		
+	}
+	
+}
+	
+
+

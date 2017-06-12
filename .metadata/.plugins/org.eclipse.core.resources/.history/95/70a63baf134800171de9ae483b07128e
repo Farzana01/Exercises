@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+//import java.util.HashMap;
+//import java.util.Map;
+
+public class VirtualPetShelter {
+
+	  public String name;
+	  public String breed;
+	  
+	
+	ArrayList<String> virtualPet = new ArrayList<String>();
+	
+	
+	 
+	
+	
+}

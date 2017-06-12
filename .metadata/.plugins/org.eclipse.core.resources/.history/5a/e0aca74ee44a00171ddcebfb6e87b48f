@@ -1,0 +1,25 @@
+package DeliveryVehicles;
+
+      public interface Vehicle {
+      
+	  public int getNumberOfSeats();
+	  public int getNumberOfWheels();
+      public int getDistTravelled();
+      public int getTimeTravelled();
+      public String getVehicleType();
+	
+      public static void main(String[] args) {   
+        Vehicle myBicycles = new Bicycles();
+        System.out.println("My " + myBicycles.getVehicleType() + " has " + myBicycles.getNumberOfSeats() + " seats.");
+        System.out.println("My " + myBicycles.getVehicleType() + " has " + myBicycles.getNumberOfWheels() + " wheels.");
+     
+        Vehicle myPlanes = new Planes();
+        System.out.println("My " + myPlanes.getVehicleType() + " has " + myPlanes.getNumberOfSeats() + " seats.");
+        System.out.println("My " + myPlanes.getVehicleType() + " has " + myPlanes.getNumberOfWheels() + " wheels.");
+    
+        Vehicle myVans = new Vans();
+        System.out.println("My " + myVans.getVehicleType() + " has " + myVans.getNumberOfSeats() + " seats.");
+        System.out.println("My " + myVans.getVehicleType() + " has " + myVans.getNumberOfWheels() + " wheels.");
+      
+      }
+}

@@ -1,0 +1,61 @@
+package ArrayLists;
+
+import java.util.ArrayList;
+
+public class MoreTools {
+
+	public static void main(String[] args) {
+		ArrayList<String> myThings = buildDemoList();
+		myThings.add("this");
+		myThings.add("that");
+		myThings.add("the other");
+		System.out.println(myThings);
+		
+		myThings.clear();
+		System.out.println(myThings);// array is empty
+		
+	// this is like myArray[1] = "foo"
+		
+	//Inserting foo in the second place
+		myThings = buildDemoList();
+		myThings.set(1, "foo");
+		System.out.println(myThings);
+		
+		// inserting an index
+		myThings.add(2,"bar");
+		System.out.println(myThings);
+		
+		// remove by index
+		myThings.remove(2);
+		System.out.println(myThings);
+		
+		// remove (the first one) by value
+		myThings.remove("foo");
+		System.out.println(myThings);
+		
+		myThings.add("foo");
+		myThings.add("foo");
+		System.out.println(myThings);
+		while (myThings.contains("foo")) {
+			myThings.remove("foo");
+			
+		}
+		
+		System.out.println(myThings);
+	}
+
+  public static ArrayList<String> buildDemoList() {
+	    ArrayList<String> demoList = new ArrayList<String>();
+		demoList.add("this");
+		demoList.add("that");
+		demoList.add("the other");
+	    return demoList;
+  
+  }    
+	    
+  
+  }
+
+
+
+

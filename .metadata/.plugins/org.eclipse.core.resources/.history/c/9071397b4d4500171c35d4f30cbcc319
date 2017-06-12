@@ -1,0 +1,17 @@
+package ArrayLists;
+
+import java.util.ArrayList;
+
+public class MoreTools {
+
+	public static void main(String[] args) {
+		ArrayList<String> myThings = new ArrayList<String>();
+		myThings.add("this");
+		myThings.add("that");
+		myThings.add("the other");
+		System.out.println(myThings);
+		
+		
+	}
+
+}

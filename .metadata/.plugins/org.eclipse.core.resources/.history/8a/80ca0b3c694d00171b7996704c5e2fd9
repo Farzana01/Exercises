@@ -1,0 +1,53 @@
+package virtualpetsamok;
+
+public class OrganicDog extends Dog {
+
+	protected int cageMessiness;
+	   
+	public OrganicDog(String newName, String newDescription) {
+		super(newName, newDescription);
+		cageMessiness = 50;
+		System.out.println("Hi, I am an organic dog.");
+	}
+	
+	@Override
+	public void walk() {
+		
+	}
+
+	@Override
+	public void play() {
+				
+	}
+
+	@Override
+	public void tick() {
+				
+	}
+
+	@Override
+	public String getName() {
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		return null;
+	}
+
+	@Override
+	public int getHealth() {
+		return 0;
+	}
+
+	@Override
+	public int getMood() {
+		return 0;
+	}
+
+	@Override
+	public int generateRandom() {
+		return 0;
+	}
+				
+}

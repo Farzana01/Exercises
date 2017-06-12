@@ -1,0 +1,28 @@
+package virtualpetsamok;
+
+import java.util.Random;
+
+public abstract class VirtualPet {
+	
+	protected Random generator = new Random();
+
+	  protected String description;  //instance variables
+	  protected String name;
+	  protected int health;
+	  protected int Mood;
+	
+	public VirtualPet(String nameParam, String descriptionParam) {
+		name = nameParam;
+		description = descriptionParam;
+		health = 50; // a scale from 1 to 100 and 50 is in the middle
+		Mood = 50;
+	}
+	
+	public abstract void play();
+	public abstract void tick();
+	public abstract String getName();
+	public abstract String getDescription();
+	public abstract int getHealth();
+	public abstract int getMood();
+	public abstract int generateRandom();
+}

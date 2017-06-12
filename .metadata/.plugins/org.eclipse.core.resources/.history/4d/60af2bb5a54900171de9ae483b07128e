@@ -1,0 +1,87 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
+
+
+public class VirtualPetShelter {
+	
+// additional attributes of pets who reside at the shelter
+	
+/*
+	ArrayList<String> shelterPets = new ArrayList<String>();
+	//	public VirtualPetShelter
+	  
+		shelterPets.add("Smelly");
+        shelterPets.add("Sparky");
+        shelterPets.add("Fluffy");
+        shelterPets.add("");
+      
+public int adopt;
+    public int dropoff;
+    public int koalasLeft;
+    public int totalKoala;
+       
+ // constructor 
+    VirtualPetShelter(int adopt,int dropoff) {
+	        this.adopt = adopt;
+	        this.dropoff= dropoff;
+	              
+	    }
+//allow adoption of a homeless pet
+     public int adoptaKoala() {
+    	 koalasLeft = totalKoala - 1;
+    	 
+    	 return koalasLeft;
+    	 
+     } //closing for adoptaKoala
+ 
+// allow drop off of a homeless pet     
+     public int dropaKoala() {
+    	 
+    	 koalasLeft = totalKoala + 1 ;
+    	 return koalasLeft;
+    	 
+     }//closing dropaKoala
+
+   */
+//	}// closing for class VirtualPetShelter     
+
+//return of Collection of all the clothes	   
+//Collection<ArrayList<String>> values = hussainF.values(); // create collection
+ //System.out.println(values);// print all items
+
+
+	static Map<String, VirtualPet> vPets = new HashMap<String, VirtualPet>();
+			
+	Set<String> keys = vPets.keySet();
+	
+	public void intakePet(VirtualPet v){
+		vPets.put(v.name, v);
+	}
+	
+	public void adoptPet(VirtualPet v){
+		vPets.remove(v.name, v);
+	}	
+	
+	public void display(VirtualPet v){
+		
+	}
+	
+	System.out.println(vPets.get(v.name);
+	}
+	
+	public void showObj(VirtualPet v){
+	  
+	     for (String key:keys) {
+	         System.out.println(key + "->" + vPets.get(key));
+	     } 
+	}
+
+
+}
+	  
