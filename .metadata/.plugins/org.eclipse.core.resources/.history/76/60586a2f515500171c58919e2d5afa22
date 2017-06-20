@@ -1,0 +1,36 @@
+package MapsExercise;
+
+import java.util.ArrayList;
+
+public class Olympics {
+
+	private static final String OlympicSports = null;
+
+	public static void main(String[] args) {
+/*		There are 4 Olympic sports in this list. They are: 
+			Archery
+			Boxing
+			Cricket
+			Diving
+			Beijing hosted the summer Olympics in 2008.
+			London hosted the summer Olympics in 2012.
+			Rio de Janeiro will host the summer Olympics in 2016.
+	*/	
+		
+		ArrayList<String> olympicSports = new ArrayList<String>();
+		olympicSports.add("Archery");
+		olympicSports.add("Boxing");
+		olympicSports.add("Cricket");
+		olympicSports.add("Diving");
+		
+		System.out.println("There are " +olympicSports.size() +" sports in this list."
+		+ " They are: ");
+		
+	//	for(String sport: olympicSports);
+		
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package hello;
+
+public class VirtualPetJava {
+ 
+	  private String name;
+	  private int hunger;
+	  private int boredom;
+	  
+	  public VirtualPet(String name, int hunger, int boredom) {
+		  
+	  }
+	  
+	
+	
+	
+}
